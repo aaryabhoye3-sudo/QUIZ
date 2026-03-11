@@ -1,2 +1,0 @@
-# QUIZ
-AI Quiz
