@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+	
+	<h1>Smart Quiz App</h1>
+	<div id="main-screen">
+		<div class="Difficulty">
+			<input type="text" id="topic" placeholder="Eg. C Programming" required>
+		</div>
+		<div class="difficulty-selector">
+			<label>Questions:</label>
+			<input type="number" id="numQ" value="5" min="1" max="10">
+                
+			<label>Difficulty Level:</label>
+                	<select id="difficulty">
+                    		<option value="easy">Easy</option>
+                    		<option value="medium" selected>Medium</option>
+                    		<option value="hard">Hard</option>
+                	</select>
+		</div>
+		<button id="startBtn" class="control-btn" style="width: 100%; grid-column: span 3;">Start Quiz</button>
+	</div>
+
+	<div id="quiz-screen" style="display: none;">
+		<div class="score-board">
+			<div class="score-item">Time:<span id="timer">0.0</span>s
+			</div>
+			<div class="score-item">Score:<span id="score">0</span>
+			</div>
+		</div>
+		<h3 id="question-text">Loading question...</h3>
+		<div id="options-grid" class="button-container">
+		</div>
+	</div>
+
+
+	<div id="result-screen" style="display: none;">
+		<h2 id="final-status">Quiz Complete!</h2>
+		<p id="final-score"></p>
+		<button onclick="location.reload()" id="startBtn">Try Again</button>
+		<div id="history-log" style="margin-top: 20px; text-align: left;"></div>	</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
